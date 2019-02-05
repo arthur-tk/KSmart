@@ -3,6 +3,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CalendarPage } from '../calendar/calendar';
 import { LoginPage } from '../login/login';
 import { AboutPage } from '../about/about';
+import { ClassPage } from '../class/class';
+import { ExamPage } from '../exam/exam';
+import { RulePage } from '../rule/rule';
+import { ContactPage } from '../contact/contact';
+import { GradePage } from '../grade/grade';
+
 
 /**
  * Generated class for the HomePage page.
@@ -37,8 +43,25 @@ export class HomePage {
     this.navCtrl.push(AboutPage);
   }
 
-  
+  onClassClick(){
+    this.navCtrl.push(ClassPage);
+  }
 
+  onExamClick(){
+    this.navCtrl.push(ExamPage);
+  }
+
+  onRuleClick(){
+    this.navCtrl.push(RulePage);
+  }
+
+  onContactClick(){
+    this.navCtrl.push(ContactPage);
+  }
+
+  onGradeClick(){
+    this.navCtrl.push(GradePage)
+  }
 
 
 }

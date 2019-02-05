@@ -9,6 +9,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { AboutPage } from '../pages/about/about';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { LoginPage } from '../pages/login/login';
+import { ClassPage } from '../pages/class/class';
+import { ExamPage } from '../pages/exam/exam';
+import { RulePage } from '../pages/rule/rule';
+import { GradePage } from '../pages/grade/grade';
 
 
 
@@ -20,7 +24,11 @@ import { LoginPage } from '../pages/login/login';
     ContactPage,
     AboutPage,
     CalendarPage,
-    LoginPage
+    LoginPage,
+    ClassPage,
+    ExamPage,
+    RulePage,
+    GradePage
     
   ],
   imports: [
@@ -34,7 +42,11 @@ import { LoginPage } from '../pages/login/login';
     ContactPage,
     AboutPage,
     CalendarPage,
-    LoginPage
+    LoginPage,
+    ClassPage,
+    ExamPage,
+    RulePage,
+    GradePage
     
   ],
   providers: [

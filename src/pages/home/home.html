@@ -20,56 +20,43 @@
 
 </ion-header>
 
-<ion-content padding>
-  <ion-row>
+<ion-content padding >
+  <ion-row>&nbsp;&nbsp;&nbsp;
     <button (click)="onAboutClick()">
-
       <ion-col size="3">
-
         <ion-card>
-
           <ion-card-header>
             <img style="width:35px ; height:35px ;" src="../../assets/imgs/school.png" alt="error" />
           </ion-card-header>
-
           <ion-card-content>
             <div text-center>
               About
             </div>
-
           </ion-card-content>
-
         </ion-card>
-
       </ion-col>
     </button>
 
     <button (click)="onCalendarClick()">
       <ion-col size="3">
         <ion-card>
-
           <ion-card-header>
-
             <img style="width:35px ; height:35px ;" src="../../assets/imgs/calendar.png" alt="error" />
           </ion-card-header>
-
           <ion-card-content>
             <div text-center>
               Event
             </div>
           </ion-card-content>
-
         </ion-card>
       </ion-col>
     </button>
 
-    
-    <button>
+
+    <button (click)="onGradeClick()">
       <ion-col size="3">
         <ion-card>
-
           <ion-card-header>
-
             <img style="width:35px ; height:35px ;" src="../../assets/imgs/grade.png" alt="error" />
           </ion-card-header>
           <ion-card-content>
@@ -77,134 +64,109 @@
               Grade
             </div>
           </ion-card-content>
-
-
         </ion-card>
-
       </ion-col>
     </button>
 
 
 
   </ion-row>
-  <ion-row>
-    <ion-col size="3">
 
-      <ion-card>
+  <ion-row>&nbsp;&nbsp;&nbsp;
+    <button (click)="onClassClick()">
+      <ion-col size="3">
+        <ion-card>
+          <ion-card-header>
+            <img style="width:35px ; height:35px ;" src="../../assets/imgs/schedule.png" alt="error" />
+          </ion-card-header>
+          <ion-card-content>
+            <div text-center>
+              Class
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </button>
 
-        <ion-card-header>
+    <button (click)="onExamClick()">
+      <ion-col size="3">
+        <ion-card>
+          <ion-card-header>
+            <img style="width:35px ; height:35px ;" src="../../assets/imgs/test.png" alt="error" />
+          </ion-card-header>
+          <ion-card-content>
+            <div text-center>
+              Exam
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </button>
 
-          <img style="width:35px ; height:35px ;" src="../../assets/imgs/schedule.png" alt="error" />
-        </ion-card-header>
-
-        <ion-card-content>
-          <div text-center>
-            Course
-          </div>
-        </ion-card-content>
-
-      </ion-card>
-    </ion-col>
-
-    <ion-col size="3">
-
-      <ion-card>
-
-        <ion-card-header>
-
-          <img style="width:35px ; height:35px ;" src="../../assets/imgs/test.png" alt="error" />
-        </ion-card-header>
-
-        <ion-card-content>
-          <div text-center>
-            Test
-          </div>
-        </ion-card-content>
-
-      </ion-card>
-    </ion-col>
-
-    <ion-col size="3">
-      <ion-card>
-
-        <ion-card-header>
-
-          <img style="width:35px ; height:35px ;" src="../../assets/imgs/male-reporter.png" alt="error" />
-        </ion-card-header>
-        <ion-card-content>
-          <div text-center>
-            Guide
-          </div>
-        </ion-card-content>
-
-
-      </ion-card>
-
-    </ion-col>
-
-
+    <button (click)="onRuleClick()">
+      <ion-col size="3">
+        <ion-card>
+          <ion-card-header>
+            <img style="width:35px ; height:35px ;" src="../../assets/imgs/male-reporter.png" alt="error" />
+          </ion-card-header>
+          <ion-card-content>
+            <div text-center>
+              Rule
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </button>
 
   </ion-row>
 
-  <ion-row>
-    <ion-col size="3">
+  <ion-row>&nbsp;&nbsp;
 
-      <ion-card>
-
-        <ion-card-header>
-
-          <img style="width:35px ; height:35px ;" src="../../assets/imgs/enterprise.png" alt="error" />
-        </ion-card-header>
-
-        <ion-card-content>
-          <div text-center>
-            Services
-          </div>
-        </ion-card-content>
-
-      </ion-card>
-    </ion-col>
-
+    <button (click)="onContactClick()">
+      <ion-col size="3">
+        <ion-card>
+          <ion-card-header>
+            <img style="width:35px ; height:35px ;" src="../../assets/imgs/enterprise.png" alt="error" />
+          </ion-card-header>
+          <ion-card-content>
+            <div text-center>
+              Contact
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </button>
 
     <button (click)="onLoginClick()">
       <ion-col size="3">
-
         <ion-card>
-
           <ion-card-header>
-
             <img style="width:35px ; height:35px ;" src="../../assets/imgs/users.png" alt="error" />
           </ion-card-header>
-
           <ion-card-content>
             <div text-center>
               Login
             </div>
           </ion-card-content>
-
         </ion-card>
       </ion-col>
     </button>
-    
-    <ion-col size="3">
-      <ion-card>
 
-        <ion-card-header>
-
-          <img style="width:35px ; height:35px ;" src="../../assets/imgs/school.png" alt="error" />
-        </ion-card-header>
-        <ion-card-content>
-          <div text-center>
-            Grade
-          </div>
-        </ion-card-content>
-
-
-      </ion-card>
-
-    </ion-col>
-
-
+    <button (click)="onGradeClick()">
+      <ion-col size="3">
+        <ion-card>
+          <ion-card-header>
+            <img style="width:35px ; height:35px ;" src="../../assets/imgs/school.png" alt="error" />
+          </ion-card-header>
+          <ion-card-content>
+            <div text-center>
+              Grade
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </button>
 
   </ion-row>
+
 </ion-content>
