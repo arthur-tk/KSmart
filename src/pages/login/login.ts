@@ -27,7 +27,24 @@ export class LoginPage {
   }*/
   
   doLogin(){
-    this.navCtrl.setRoot('HomePage');
+
+    console.log(this.username + this.password)
+
+    if( this.username =="admin" && this.password == "admin"){
+      console.log("OK")
+    }
+    else{
+      console.log("bad")
+
+    }
+
   }
+
+  onChangeInputUser(event){
+      this.username = event.value
+  }
+  onChangeInputPass(event){
+    this.password = event.value
+}
 
 }

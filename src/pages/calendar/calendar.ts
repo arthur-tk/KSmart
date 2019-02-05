@@ -18,8 +18,26 @@ export class CalendarPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CalendarPage');
+  // ionViewDidLoad() {
+  //   console.log(' CalendarPage');
+  // }
+
+  ionViewWillLoad() {
+    console.log(' test');
   }
+
+  ionViewWillEnter(){
+    console.log(' one');
+
+  }
+
+  ionViewDidEnter(){
+    console.log(' two');
+    
+  }
+
+  ionViewWillleave
+
+  
 
 }

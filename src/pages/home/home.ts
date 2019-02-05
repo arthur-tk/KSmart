@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CalendarPage } from '../calendar/calendar';
+import { LoginPage } from '../login/login';
+import { AboutPage } from '../about/about';
 
 /**
  * Generated class for the HomePage page.
@@ -20,11 +22,23 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('Check UserName');
   }
 
-  onClickPushBtn(){
-    this.navCtrl.push(CalendarPage);
+  onCalendarClick(){
+    this.navCtrl.push(CalendarPage);    
   }
+
+  onLoginClick(){
+    this.navCtrl.push(LoginPage);    
+  }
+
+  onAboutClick(){
+    this.navCtrl.push(AboutPage);
+  }
+
+  
+
+
 
 }

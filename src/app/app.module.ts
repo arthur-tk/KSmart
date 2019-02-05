@@ -7,6 +7,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ContactPage } from '../pages/contact/contact';
 import { AboutPage } from '../pages/about/about';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -16,8 +18,9 @@ import { AboutPage } from '../pages/about/about';
     MyApp,
     HomePage,
     ContactPage,
-    AboutPage
-   
+    AboutPage,
+    CalendarPage,
+    LoginPage
     
   ],
   imports: [
@@ -29,7 +32,9 @@ import { AboutPage } from '../pages/about/about';
     MyApp,
     HomePage,
     ContactPage,
-    AboutPage
+    AboutPage,
+    CalendarPage,
+    LoginPage
     
   ],
   providers: [
