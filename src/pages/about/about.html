@@ -15,36 +15,42 @@
 
 <ion-content padding>
  
-
-  <img src="../../assets/imgs/logo.png" alt="">
   <div text-center>
-    เกี่ยวกับมหาวิทยาลัย
+  <img src="../../assets/imgs/logo.png" alt="" width="150" height="150"><br>
+  <h2>เกี่ยวกับมหาวิทยาลัย</h2>
+   
   </div>
+  <ion-item (click)="onHiskClick()">
+    <ion-label >
+      ประวัติ มจพ.
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
+  <ion-item (click)="onLogoClick()">
+    <ion-label >
+      ตราประจำมหาวิทยาลัย
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
+  <ion-item (click)="onColorClick()">
+    <ion-label >
+      สีประจำมหาวิทยาลัย
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
+  <ion-item (click)="onFlowClick()">
+    <ion-label >
+      ต้นไม้ประจำมหาวิทยาลัย
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
+  <ion-item (click)="onTextClick()">
+    <ion-label >
+      ปณิธาน/วิสัยทัศน์
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
 
-  <button (click)="onHiskClick()">
-      <div >
-          ประวัติ มจพ.
-      </div>
-  </button>
-  <button (click)="onLogoClick()">
-      <div >
-          ตราประจำมหาวิทยาลัย
-        </div>
-  </button>
-  <button (click)="onColorClick()">
-      <div >
-          สีประจำมหาวิทยาลัย
-      </div>
-  </button>
-  <button (click)="onFlowClick()">
-      <div >
-          ดอกไม้ประจำมหาวิทยาลัย
-      </div>
-  </button>
-  <button (click)="onTextClick()">
-      <div >
-          ปณิธาน/วิสัยทัศน์
-      </div>
-  </button>
+  
   
 </ion-content>

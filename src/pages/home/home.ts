@@ -8,6 +8,7 @@ import { ExamPage } from '../exam/exam';
 import { RulePage } from '../rule/rule';
 import { ContactPage } from '../contact/contact';
 import { GradePage } from '../grade/grade';
+import { MapPage } from '../map/map';
 
 
 /**
@@ -60,7 +61,11 @@ export class HomePage {
   }
 
   onGradeClick(){
-    this.navCtrl.push(GradePage)
+    this.navCtrl.push(GradePage);
+  }
+
+  onMapClick(){
+    this.navCtrl.push(MapPage);
   }
 
 

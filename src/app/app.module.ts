@@ -13,6 +13,12 @@ import { ClassPage } from '../pages/class/class';
 import { ExamPage } from '../pages/exam/exam';
 import { RulePage } from '../pages/rule/rule';
 import { GradePage } from '../pages/grade/grade';
+import { HiskPage } from '../pages/hisk/hisk';
+import { LogoPage } from '../pages/logo/logo';
+import { ColorPage } from '../pages/color/color';
+import { FlowPage } from '../pages/flow/flow';
+import { TextPage } from '../pages/text/text';
+import { MapPage } from '../pages/map/map';
 
 
 
@@ -28,7 +34,13 @@ import { GradePage } from '../pages/grade/grade';
     ClassPage,
     ExamPage,
     RulePage,
-    GradePage
+    GradePage,
+    HiskPage,
+    LogoPage,
+    ColorPage,
+    FlowPage,
+    TextPage,
+    MapPage
     
   ],
   imports: [
@@ -46,7 +58,13 @@ import { GradePage } from '../pages/grade/grade';
     ClassPage,
     ExamPage,
     RulePage,
-    GradePage
+    GradePage,
+    HiskPage,
+    LogoPage,
+    ColorPage,
+    FlowPage,
+    TextPage,
+    MapPage
     
   ],
   providers: [
