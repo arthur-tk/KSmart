@@ -19,6 +19,7 @@ import { ColorPage } from '../pages/color/color';
 import { FlowPage } from '../pages/flow/flow';
 import { TextPage } from '../pages/text/text';
 import { MapPage } from '../pages/map/map';
+import { KaruPage } from '../pages/karu/karu';
 
 
 
@@ -40,7 +41,8 @@ import { MapPage } from '../pages/map/map';
     ColorPage,
     FlowPage,
     TextPage,
-    MapPage
+    MapPage,
+    KaruPage
     
   ],
   imports: [
@@ -64,7 +66,8 @@ import { MapPage } from '../pages/map/map';
     ColorPage,
     FlowPage,
     TextPage,
-    MapPage
+    MapPage,
+    KaruPage
     
   ],
   providers: [
