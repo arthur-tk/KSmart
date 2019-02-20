@@ -20,6 +20,10 @@ import { FlowPage } from '../pages/flow/flow';
 import { TextPage } from '../pages/text/text';
 import { MapPage } from '../pages/map/map';
 import { KaruPage } from '../pages/karu/karu';
+import { HttpClientModule} from '@angular/common/http';
+import { RestProvider } from '../providers/rest/rest';
+
+
 
 
 
@@ -42,11 +46,13 @@ import { KaruPage } from '../pages/karu/karu';
     FlowPage,
     TextPage,
     MapPage,
-    KaruPage
+    KaruPage,
+  
     
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -73,7 +79,8 @@ import { KaruPage } from '../pages/karu/karu';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestProvider
   ]
 })
 export class AppModule {}

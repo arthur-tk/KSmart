@@ -14,5 +14,23 @@
 
 
 <ion-content padding>
+  <strong>Result:</strong>
+
+
+  <ion-list>
+    <ion-item *ngFor="let spy of spy">
+      <ion-label>{{spy.ExamData.SbjID}}</ion-label>
+      <ion-label>{{spy.ExamData.SbjEName}}</ion-label>
+      <ion-label>S.{{spy.ExamData.Section}}</ion-label>
+      <ion-label>{{spy.ExamData.Date}}</ion-label>
+      <ion-label>{{spy.ExamData.Time}} น.</ion-label>
+      <ion-label>{{spy.ExamData.Room}}</ion-label>
+    </ion-item>
+    
+
+  </ion-list>
+
+  <!-- <p *ngIf="spy">{{spy}}</p> -->
+
 
 </ion-content>
