@@ -19,4 +19,8 @@ export class RestProvider {
     let url = "https://exam.fte.kmutnb.ac.th/API/StdExam/5802041620084"
     return this.http.get<any>(url);
   }
+  grade():Observable<any>{
+    let url = "https://exam.fte.kmutnb.ac.th/api/GradeList.php/?std=5802041620084&year=2560&sem=1"
+    return this.http.get<any>(url);
+  }
 }

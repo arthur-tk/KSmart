@@ -1,9 +1,4 @@
-<!--
-  Generated template for the GradePage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -14,5 +9,27 @@
 
 
 <ion-content padding>
+  <ion-card *ngFor="let gra of gra">
+    <ion-card-header style="background-color:#ff6000;"> 
+      
+    </ion-card-header>
+    <ion-card-content>
+     
 
+       
+          <ion-label>{{gra.COURSE_CODE}}</ion-label>
+          <b><ion-label>{{gra.COURSE_NAME_ENG}}</ion-label></b><br>
+          <ion-label>{{gra.SECTION}}</ion-label>
+          <ion-label>{{gra.GRADE}} </ion-label>
+          
+      
+
+
+
+
+      
+      
+    </ion-card-content> -->
+
+  </ion-card>
 </ion-content>

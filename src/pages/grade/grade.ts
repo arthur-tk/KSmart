@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { RestProvider } from '../../providers/rest/rest';
 /**
  * Generated class for the GradePage page.
  *
@@ -14,12 +14,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'grade.html',
 })
 export class GradePage {
+ 
+  gra: any
+  de: any
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+
+
   }
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GradePage');
+    this.restProvider.grade().subscribe(result => {
+      this.gra = result.GradeList
+      console.log(this.gra);
+
+      this.gra.map((data) => {
+        console.log(this.de)
+        return this.de = data
+      })
+      
+
+    })
   }
 
 }
