@@ -16,11 +16,11 @@ export class RestProvider {
   }
 
   exam():Observable<any>{
-    let url = "https://exam.fte.kmutnb.ac.th/API/StdExam/5802041620084"
+    let url = "api"
     return this.http.get<any>(url);
   }
   grade():Observable<any>{
-    let url = "https://exam.fte.kmutnb.ac.th/api/GradeList.php/?std=5802041620084&year=2560&sem=1"
+    let url = "api"
     return this.http.get<any>(url);
   }
 }
