@@ -3,21 +3,19 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 /*
-  Generated class for the RestProvider provider.
+  Generated class for the RestregisProvider provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
-export class RestProvider {
+export class RestregisProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello RestProvider Provider');
+    console.log('Hello RestregisProvider Provider');
   }
-
-  exam():Observable<any>{
-    let url = "api1"
+  regis(): Observable<any> {
+    let url = "api3"
     return this.http.get<any>(url);
   }
-  
 }

@@ -14,11 +14,8 @@ export class ExamPage {
 
   spy: any
   test: any
-  // test: {
-  //   id: String,
-  //   sbj: String
-  // }
-
+  
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
 
 

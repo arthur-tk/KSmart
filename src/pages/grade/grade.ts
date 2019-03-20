@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
-/**
- * Generated class for the GradePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
+import { RestgradeProvider } from '../../providers/restgrade/restgrade';
+
 
 @IonicPage()
 @Component({
@@ -14,24 +9,44 @@ import { RestProvider } from '../../providers/rest/rest';
   templateUrl: 'grade.html',
 })
 export class GradePage {
- 
-  gra: any
-  de: any
 
-   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+  gra: any
+
+  NameSubject: any
+  Grade: any
+
+  Values = {
+    name: {},
+    grade: {}
+  }
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restgradeProvider: RestgradeProvider) {
 
 
   }
+  // ionViewWillEnter() {
   ionViewDidLoad() {
-    this.restProvider.grade().subscribe(result => {
-      this.gra = result.GradeList
-      console.log(this.gra);
+    this.restgradeProvider.grade().subscribe((result) => {
 
-      this.gra.map((data) => {
-        console.log(this.de)
-        return this.de = data
+      this.gra = result.GradeList
+
+      var nameSubject = []
+      this.gra.COURSE_NAME_ENG.map((data) => {
+        nameSubject.push(data)
+        this.Values.name = nameSubject
+        this.NameSubject = nameSubject
       })
-      
+
+      var grade = []
+      this.gra.GRADE.map((data) => {
+        grade.push(data)
+        this.Grade = grade
+        this.Values.grade = grade
+      })
+
+      console.log(this.gra)
+
 
     })
   }

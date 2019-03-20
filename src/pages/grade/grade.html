@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -7,29 +6,33 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-card *ngFor="let gra of gra">
-    <ion-card-header style="background-color:#ff6000;"> 
-      
-    </ion-card-header>
-    <ion-card-content>
-     
+    <select>
+        <option>2555</option>
+        <option>2556</option>
+        <option>2557</option>
+        <option>2558</option>
+        <option>2559</option>
+        <option>2560</option>
+        <option>2561</option>
+        <option>2562</option>     
+      </select>
+      <select>
+          <option>1</option>
+          <option>2</option>
+        </select>
+  <ion-list *ngFor="let grade of Grade; let i = index;">
+    <ion-row>
+      <ion-col>
+        <div style="width: 150px;">
+          <ion-label>{{NameSubject[i]}}</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{grade}}</ion-label>
+      </ion-col>
+    </ion-row>
 
-       
-          <ion-label>{{gra.COURSE_CODE}}</ion-label>
-          <b><ion-label>{{gra.COURSE_NAME_ENG}}</ion-label></b><br>
-          <ion-label>{{gra.SECTION}}</ion-label>
-          <ion-label>{{gra.GRADE}} </ion-label>
-          
-      
+  </ion-list>
 
-
-
-
-      
-      
-    </ion-card-content> -->
-
-  </ion-card>
 </ion-content>

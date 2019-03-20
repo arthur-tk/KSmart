@@ -14,9 +14,7 @@
 
 
 <ion-content padding>
-  <strong>ตารางสอบ</strong>
-
-  <ion-card *ngFor="let spy of spy">
+    <ion-card *ngFor="let spy of spy">
     <ion-card-header style="background-color:#ff6000;"> 
       <b><ion-label>{{spy.ExamData.Date}}</ion-label></b>
     </ion-card-header>
@@ -25,7 +23,7 @@
 
        
           <ion-label>{{spy.ExamData.SbjID}}</ion-label>
-          <b><ion-label>{{spy.ExamData.SbjEName}}</ion-label></b><br>
+          <b><ion-label>{{spy.ExamData.SbjEName}}</ion-label></b>
           <ion-label>S.{{spy.ExamData.Section}}</ion-label>
           <ion-label>{{spy.ExamData.Time}} น.</ion-label>
           <ion-label>{{spy.ExamData.Room}}</ion-label>
@@ -39,22 +37,6 @@
     </ion-card-content>
 
   </ion-card>
-
-  <!-- <ion-list> -->
-  <!-- <div class="col-12"> -->
-  <!-- <ion-item *ngFor="let spy of spy">
-            <ion-label class="col-2">{{spy.ExamData.SbjID}}</ion-label>
-            <ion-label style="font-size:8px; width: 100px">{{spy.ExamData.SbjEName}}</ion-label><br>
-            <ion-label>S.{{spy.ExamData.Section}}</ion-label>
-            <ion-label>{{spy.ExamData.Date}}</ion-label>
-            <ion-label>{{spy.ExamData.Time}} น.</ion-label>
-            <ion-label>{{spy.ExamData.Room}}</ion-label>
-          </ion-item> -->
-  <!-- </div> -->
-
-
-
-  <!-- </ion-list> -->
 
 
 

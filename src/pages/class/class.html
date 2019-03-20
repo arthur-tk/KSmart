@@ -15,4 +15,19 @@
 
 <ion-content padding>
 
+  <ion-card *ngFor="let codes of codename; let i = index;">
+    <ion-card-header style="background-color:#ff6000;">
+      <b>
+        <ion-label>{{days[i]}}</ion-label>
+      </b>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>{{Nameshrt[i]}}</ion-label>
+      <ion-label>{{codename[i]}}</ion-label>
+      <ion-label>S.{{section[i]}}</ion-label>
+      <ion-label>{{build_no[i]}}-{{room_no[i]}}</ion-label>
+      <ion-label>{{start_time[i]}} น. - {{end_time[i]}} น.</ion-label>
+    </ion-card-content>
+
+  </ion-card>
 </ion-content>

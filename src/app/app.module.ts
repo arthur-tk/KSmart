@@ -22,6 +22,11 @@ import { MapPage } from '../pages/map/map';
 import { KaruPage } from '../pages/karu/karu';
 import { HttpClientModule} from '@angular/common/http';
 import { RestProvider } from '../providers/rest/rest';
+import { RestgradeProvider } from '../providers/restgrade/restgrade';
+import { RestregisProvider } from '../providers/restregis/restregis';
+import { ResttimeProvider } from '../providers/resttime/resttime';
+
+
 
 
 
@@ -79,7 +84,11 @@ import { RestProvider } from '../providers/rest/rest';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    RestgradeProvider,
+    RestregisProvider,
+    ResttimeProvider
+    
   ]
 })
 export class AppModule {}
