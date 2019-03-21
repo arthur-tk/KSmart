@@ -15,7 +15,7 @@ export class RestregisProvider {
     console.log('Hello RestregisProvider Provider');
   }
   regis(): Observable<any> {
-    let url = "api3"
+    let url = ""
     return this.http.get<any>(url);
   }
 }

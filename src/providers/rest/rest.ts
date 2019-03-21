@@ -16,7 +16,7 @@ export class RestProvider {
   }
 
   exam():Observable<any>{
-    let url = "api1"
+    let url = ""
     return this.http.get<any>(url);
   }
   

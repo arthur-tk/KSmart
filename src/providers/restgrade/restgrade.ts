@@ -15,7 +15,7 @@ export class RestgradeProvider {
   }
 
   grade():Observable<any>{
-    let url = "api2"
+    let url = ""
     return this.http.get<any>(url);
   }
 }

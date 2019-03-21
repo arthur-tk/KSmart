@@ -15,7 +15,7 @@ export class ResttimeProvider {
     console.log('Hello ResttimeProvider Provider');
   }
   time(): Observable<any> {
-    let url = "api4"
+    let url = ""
     return this.http.get<any>(url);
   }
 }
