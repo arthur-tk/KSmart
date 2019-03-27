@@ -51,4 +51,7 @@ export class GradePage {
     })
   }
 
+  test($event){
+    console.log('ok' , $event.target.value)
+  }
 }

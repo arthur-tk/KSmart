@@ -1,9 +1,4 @@
-<!--
-  Generated template for the ClassPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -15,7 +10,7 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let codes of codename; let i = index;">
+  <ion-card *ngFor="let value of TimeLearn; let i = index;">
     <ion-card-header style="background-color:#ff6000;">
       <b>
         <ion-label>{{days[i]}}</ion-label>
@@ -25,7 +20,7 @@
       <ion-label>{{codename[i]}}</ion-label>
       <ion-label>{{Nameshrt[i]}}</ion-label>
       <ion-label>S.{{section[i]}}</ion-label>
-      <ion-label >{{TimeLearn}} น. -  {{TimeOut}} น.</ion-label>
+      <ion-label >{{TimeLearn[i]}} น. -  {{TimeOut[i]}} น.</ion-label>
       <ion-label>{{build_no[i]}}-{{room_no[i]}}</ion-label>
     </ion-card-content>
 
