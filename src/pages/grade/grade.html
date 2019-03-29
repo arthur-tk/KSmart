@@ -7,19 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-    <select>
-        <option>2555</option>
-        <option>2556</option>
-        <option>2557</option>
-        <option>2558</option>
-        <option>2559</option>
-        <option>2560</option>
-        <option>2561</option>
-        <option>2562</option>     
+    <select placeholder="Select One" (change)="year($event)">
+        <option>ปีการศึกษา</option>
+        <option value="2555">2555</option>
+        <option value="2556">2556</option>
+        <option value="2557">2557</option>
+        <option value="2558">2558</option>
+        <option value="2559">2559</option>
+        <option value="2560">2560</option>
+        <option value="2561">2561</option>
+        <option value="2562">2562</option>     
       </select>
-      <select>
-          <option>1</option>
-          <option>2</option>
+      <select placeholder="Select Two" (change)="term($event)">
+        <option>ภาคเรียน</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
         </select>
   <ion-list *ngFor="let grade of Grade; let i = index;">
     <ion-row>
@@ -34,12 +36,5 @@
     </ion-row>
 
   </ion-list>
-    <select placeholder="Select One" (change)="test($event)">
-      <option value="red">Red</option>
-      <option value="purple">Purple</option>
-      <option value="yellow">Yellow</option>
-      <option value="orange">Orange</option>
-      <option value="green">Green</option>
-    </select>
 
 </ion-content>
