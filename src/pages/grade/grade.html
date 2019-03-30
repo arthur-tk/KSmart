@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-    <select placeholder="Select One" (change)="year($event)">
-        <option>ปีการศึกษา</option>
+    <select (change)="year($event)">
+        <option value="">ปีการศึกษา</option>
         <option value="2555">2555</option>
         <option value="2556">2556</option>
         <option value="2557">2557</option>
@@ -18,11 +18,12 @@
         <option value="2561">2561</option>
         <option value="2562">2562</option>     
       </select>
-      <select placeholder="Select Two" (change)="term($event)">
-        <option>ภาคเรียน</option>
+      <select (change)="term($event)">
+        <option value="">ภาคเรียน</option>
         <option value="1">1</option>
         <option value="2">2</option>
         </select>
+        <button (click)="choice()">ตกลง</button>
   <ion-list *ngFor="let grade of Grade; let i = index;">
     <ion-row>
       <ion-col>

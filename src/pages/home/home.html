@@ -22,9 +22,11 @@
 
 <ion-content padding>
   <img style="width:400px ; height:90px ;" src="../../assets/imgs/Header1.png" alt="error" />
-  <ion-row>&nbsp;&nbsp;&nbsp;
+  <ion-grid text-align="center" width=100%>
+  
+  <ion-row>
     <button (click)="onAboutClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
           <img style="width:65px ; height:100px ;" src="../../assets/imgs/about.png" alt="error" />
         </ion-card>
@@ -32,7 +34,7 @@
     </button>
 
     <button (click)="onCalendarClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
           <img style="width:65px ; height:100px ;" src="../../assets/imgs/Event.png" alt="error" />
         </ion-card>
@@ -41,7 +43,7 @@
 
 
     <button (click)="onGradeClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
             <img style="width:65px ; height:100px ;" src="../../assets/imgs/grade.png" alt="error" />
         </ion-card>
@@ -52,9 +54,9 @@
 
   </ion-row>
 
-  <ion-row>&nbsp;&nbsp;&nbsp;
+  <ion-row>
     <button (click)="onClassClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card> 
             <img style="width:65px ; height:100px ;" src="../../assets/imgs/class.png" alt="error" />
         </ion-card>
@@ -62,7 +64,7 @@
     </button>
 
     <button (click)="onExamClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
             <img style="width:65px ; height:100px ;" src="../../assets/imgs/exam.png" alt="error" />
         </ion-card>
@@ -70,7 +72,7 @@
     </button>
 
     <button (click)="onRuleClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
             <img style="width:65px ; height:100px ;" src="../../assets/imgs/Rule.png" alt="error" />
         </ion-card>
@@ -79,10 +81,10 @@
 
   </ion-row>
 
-  <ion-row>&nbsp;&nbsp;&nbsp;
+  <ion-row>
 
     <button (click)="onContactClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
             <img style="width:65px ; height:100px ;" src="../../assets/imgs/contact.png" alt="error" />
         </ion-card>
@@ -98,7 +100,7 @@
     </button>
 
     <button (click)="onMapClick()">
-      <ion-col size="3">
+      <ion-col size="4">
         <ion-card>
             <img style="width:65px ; height:100px ;" src="../../assets/imgs/map.png" alt="error" />
         </ion-card>
@@ -106,5 +108,6 @@
     </button>
 
   </ion-row>
+</ion-grid>
 
 </ion-content>

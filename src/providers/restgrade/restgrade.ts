@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+
 /*
   Generated class for the RestgradeProvider provider.
 
@@ -14,8 +15,28 @@ export class RestgradeProvider {
     console.log('Hello RestgradeProvider Provider');
   }
 
-  grade():Observable<any>{
-    let url = ""
-    return this.http.get<any>(url);
+  grade($year ,$term):Observable<any>{
+    let terms = $term
+    let years = $year
+    let url = ``
+    return this.http.get<any>(url);  
   }
+  
+  // grade():Observable<any>{
+  //   let url = ""
+  //   return this.http.get<any>(url);  
+  // }
+  Setgrade($year ,$term){
+    // console.log($year , $term)
+
+    let terms = $term
+    let years = $year
+
+    let url = ``
+    return this.http.get<any>(url).subscribe((res)=>{
+      console.log(res.GradeList)
+    });  
+
+  }
+  
 }

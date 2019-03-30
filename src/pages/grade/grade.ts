@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams} from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestgradeProvider } from '../../providers/restgrade/restgrade';
 
 
@@ -14,6 +14,11 @@ export class GradePage {
 
   NameSubject: any
   Grade: any
+  years: string;
+  terms: string;
+  pushyear: string;
+  pushterm: string;
+
 
   Values = {
     name: {},
@@ -25,36 +30,83 @@ export class GradePage {
 
 
   }
-  // ionViewWillEnter() {
-  ionViewDidLoad() {
-    this.restgradeProvider.grade().subscribe((result) => {
 
-      this.gra = result.GradeList
+  // ionViewDidLoad() {
+  //   this.restgradeProvider.grade().subscribe((result) => {
 
-      var nameSubject = []
-      this.gra.COURSE_NAME_ENG.map((data) => {
-        nameSubject.push(data)
-        this.Values.name = nameSubject
-        this.NameSubject = nameSubject
+  //     this.gra = result.GradeList
+
+  //     var nameSubject = []
+  //     this.gra.COURSE_NAME_ENG.map((data) => {
+  //       nameSubject.push(data)
+  //       this.Values.name = nameSubject
+  //       this.NameSubject = nameSubject
+  //     })
+
+  //     var grade = []
+  //     this.gra.GRADE.map((data) => {
+  //       grade.push(data)
+  //       this.Grade = grade
+  //       this.Values.grade = grade
+  //     })
+
+  //     console.log(this.gra)
+
+  //   })
+  // }
+
+  year(event: any) {
+    this.years = event.target.value;
+
+  }
+
+  term(event: any) {
+    this.terms = event.target.value;
+
+  }
+
+  choice() {
+    if (this.years == null) {
+      console.log('badyear')
+      alert('กรุณาเลือกปีการศึกษา')
+
+    }
+    else if (this.terms == null) {
+      console.log('badterm')
+      alert('กรุณาเลือกภาคเรียน')
+    }
+    else {
+      console.log('g')
+      this.pushyear = this.years;
+      this.pushterm = this.terms;
+      console.log(this.pushyear)
+      console.log(this.pushterm)
+      this.restgradeProvider.Setgrade(this.pushyear, this.pushterm)
+
+      this.restgradeProvider.grade(this.pushyear, this.pushterm).subscribe((result) => {
+
+        this.gra = result.GradeList
+
+        var nameSubject = []
+        this.gra.COURSE_NAME_ENG.map((data) => {
+          nameSubject.push(data)
+          this.Values.name = nameSubject
+          this.NameSubject = nameSubject
+        })
+
+        var grade = []
+        this.gra.GRADE.map((data) => {
+          grade.push(data)
+          this.Grade = grade
+          this.Values.grade = grade
+        })
+
+        console.log(this.gra)
+
       })
 
-      var grade = []
-      this.gra.GRADE.map((data) => {
-        grade.push(data)
-        this.Grade = grade
-        this.Values.grade = grade
-      })
+    }
 
-      console.log(this.gra)
-
-
-    })
   }
 
-  year($event){
-    console.log($event.target.value)
-  }
-  term($event){
-    console.log($event.target.value)
-  }
 }
