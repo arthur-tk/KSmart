@@ -51,7 +51,10 @@ export class GradePage {
     })
   }
 
-  test($event){
-    console.log('ok' , $event.target.value)
+  year($event){
+    console.log($event.target.value)
+  }
+  term($event){
+    console.log($event.target.value)
   }
 }
