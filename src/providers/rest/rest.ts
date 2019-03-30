@@ -16,7 +16,7 @@ export class RestProvider {
   }
 
   exam():Observable<any>{
-    let url = ""
+    let url = "https://exam.fte.kmutnb.ac.th/API/StdExam/5802041620084"
     return this.http.get<any>(url);
   }
   

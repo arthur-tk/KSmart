@@ -15,7 +15,7 @@ export class RestgradeProvider {
   }
 
   grade():Observable<any>{
-    let url = ""
+    let url = "https://exam.fte.kmutnb.ac.th/api/GradeList.php/?std=5802041620084&year=2560&sem=1"
     return this.http.get<any>(url);
   }
 }
