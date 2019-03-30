@@ -66,12 +66,15 @@ export class GradePage {
   }
 
   choice() {
-    if (this.years == null) {
+    if (this.years == undefined || this.years == '' && this.terms == undefined || this.terms == '') {
+      console.log('badyear')
+      alert('กรุณาเลือกปีการศึกษา และ ภาคเรียน')
+    }
+    else if (this.years == undefined || this.years == '') {
       console.log('badyear')
       alert('กรุณาเลือกปีการศึกษา')
-
     }
-    else if (this.terms == null) {
+    else if (this.terms == undefined || this.terms == '') {
       console.log('badterm')
       alert('กรุณาเลือกภาคเรียน')
     }
