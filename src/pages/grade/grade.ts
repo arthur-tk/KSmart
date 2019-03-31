@@ -57,17 +57,19 @@ export class GradePage {
 
   year(event: any) {
     this.years = event.target.value;
+    console.log (this.years)
 
   }
 
   term(event: any) {
     this.terms = event.target.value;
+    console.log (this.terms)
 
   }
 
   choice() {
     if (this.years == undefined || this.years == '' && this.terms == undefined || this.terms == '') {
-      console.log('badyear')
+      console.log('badyear&terms')
       alert('กรุณาเลือกปีการศึกษา และ ภาคเรียน')
     }
     else if (this.years == undefined || this.years == '') {

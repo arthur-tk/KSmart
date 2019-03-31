@@ -18,6 +18,7 @@ export class RestgradeProvider {
   grade($year ,$term):Observable<any>{
     let terms = $term
     let years = $year
+    let url = ``
     return this.http.get<any>(url);  
   }
   
@@ -26,7 +27,6 @@ export class RestgradeProvider {
   //   return this.http.get<any>(url);  
   // }
   Setgrade($year ,$term){
-    // console.log($year , $term)
 
     let terms = $term
     let years = $year
