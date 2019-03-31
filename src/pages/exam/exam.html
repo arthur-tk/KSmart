@@ -6,19 +6,18 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Exam</ion-title>
-  </ion-navbar>
+
+      <img style="width:400px ; height:100px ;" src="../../assets/imgs/exampage.png" alt="error" />
 
 </ion-header>
 
 
 <ion-content padding>
     <ion-card *ngFor="let spy of spy">
-    <ion-card-header style="background-color:#ff6000;"> 
-      <b><ion-label>{{spy.ExamData.Date}}</ion-label></b>
+    <ion-card-header class="bg-Examban"> 
+        <span style="padding-left : 190px" ><b>{{spy.ExamData.Date}}</b></span>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content >
      
 
        

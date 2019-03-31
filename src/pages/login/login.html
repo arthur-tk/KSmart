@@ -35,8 +35,8 @@
                        type="text" required [(ngModel)]="username" #email></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input placeholder="Password" name="password" id="passwordField"
-                       type="password" required [(ngModel)]="password"></ion-input>
+            <ion-input placeholder="Password" name="password" id="passwordField" type="password" required
+              [(ngModel)]="password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -44,8 +44,7 @@
     <ion-row>
       <ion-col>
         <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-        <button ion-button class="submit-btn" full type="submit"
-                [disabled]="!loginForm.form.valid">Login
+        <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Login
         </button>
       </ion-col>
     </ion-row>

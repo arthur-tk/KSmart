@@ -15,7 +15,7 @@ export class ResttimeProvider {
     console.log('Hello ResttimeProvider Provider');
   }
   time(): Observable<any> {
-    let url = ""
+    let url = "https://exam.fte.kmutnb.ac.th/api/Timelist.php/"
     return this.http.get<any>(url);
   }
 }
