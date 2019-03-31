@@ -86,7 +86,6 @@ export class GradePage {
       this.pushterm = this.terms;
       console.log(this.pushyear)
       console.log(this.pushterm)
-      this.restgradeProvider.Setgrade(this.pushyear, this.pushterm)
 
       this.restgradeProvider.grade(this.pushyear, this.pushterm).subscribe((result) => {
 

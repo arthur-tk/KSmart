@@ -26,16 +26,6 @@ export class RestgradeProvider {
   //   let url = ""
   //   return this.http.get<any>(url);  
   // }
-  Setgrade($year ,$term){
-
-    let terms = $term
-    let years = $year
-
-    let url = ``
-    return this.http.get<any>(url).subscribe((res)=>{
-      console.log(res.GradeList)
-    });  
-
-  }
+  
   
 }
