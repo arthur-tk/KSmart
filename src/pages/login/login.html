@@ -1,13 +1,10 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-
+    <img style="width:400px ; height:100px ;" src="../../assets/imgs/loginpage.png" alt="error" />
 </ion-header>
 
 
 <ion-content padding>
+    <img style="width:400px ; height:300px ;" src="../../assets/imgs/Ksmart2.png" alt="error" />
   <ion-list >
     <ion-item>
       <ion-input placeholder="Username" (ionChange)="onChangeInputUser($event)"></ion-input>
@@ -16,6 +13,6 @@
         <ion-input placeholder="Password" (ionChange)="onChangeInputPass($event)"></ion-input>
       </ion-item>
   </ion-list>
-<button ion-button full (click)="doLogin()">Login</button>
+<button ion-button full (click)="doLogin()" style="border-radius: 12px;">Login</button>
 </ion-content>
 

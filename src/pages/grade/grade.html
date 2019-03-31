@@ -1,13 +1,19 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Grade</ion-title>
-  </ion-navbar>
-
+ 
+<img style="width:400px ; height:100px ;" src="../../assets/imgs/gradepage.png" alt="error" />
 </ion-header>
 
-<ion-content padding>
-    <select (change)="year($event)">
+<ion-content padding >
+
+  <ion-card>
+    <ion-card-header style="background-color: #ff6666">
+        กรุณาระบุ ปีการศึกษา และภาคเรียน 
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label >
+      <div>เลือก:
+         <select (change)="year($event)">
         <option value="">ปีการศึกษา</option>
         <option value="2555">2555</option>
         <option value="2556">2556</option>
@@ -23,19 +29,32 @@
         <option value="1">1</option>
         <option value="2">2</option>
         </select>
-        <button (click)="choice()">ตกลง</button>
+        <button style="background-color: rgb(112, 250, 209); font-size: 20px; border-radius: 12px; margin-left: 5px" (click)="choice()">ตกลง</button>
+        </div>
+      </ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-card-content>
+  </ion-card>
+<hr>
+   
+   <ion-card class="bg-image">
+      
+     
   <ion-list *ngFor="let grade of Grade; let i = index;">
     <ion-row>
-      <ion-col>
+      
+      <ion-col style="background-color: #fc774f" size="6" >
         <div style="width: 150px;">
           <ion-label>{{NameSubject[i]}}</ion-label>
         </div>
       </ion-col>
-      <ion-col>
-        <ion-label>{{grade}}</ion-label>
+      <ion-col >
+        <ion-label >
+          <span style="padding-left : 70px"> {{grade}}</span>
+        </ion-label>
       </ion-col>
     </ion-row>
 
   </ion-list>
-
+  </ion-card> 
 </ion-content>
