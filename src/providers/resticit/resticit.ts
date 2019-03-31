@@ -26,10 +26,10 @@ export class ResticitProvider {
     let body = JSON.stringify({ username: "s5802041620084", password: "art15535" })
     let option = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.server , body,option).subscribe(res => {
-      let x = JSON.parse(res._body)
-      console.log(x)
-    })
+    // return this.http.post(this.server , body,option).subscribe(res => {
+    //   let x = JSON.parse(res._body)
+    //   console.log(x)
+    // })
   }
 
 
