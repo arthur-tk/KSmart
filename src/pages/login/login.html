@@ -1,4 +1,4 @@
-<!-- <ion-header>
+<ion-header>
 
   <ion-navbar>
     <ion-title>Login</ion-title>
@@ -17,8 +17,8 @@
       </ion-item>
   </ion-list>
 <button ion-button full (click)="doLogin()">Login</button>
-</ion-content> -->
-<ion-header>
+</ion-content>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       Login
@@ -31,7 +31,7 @@
       <ion-col>
         <ion-list inset>
           <ion-item>
-            <ion-input placeholder="Username" name="username" id="loginField"
+            <ion-input [(ngModel)]='loginModel.username' placeholder="Username" name="username" id="loginField"
                        type="text" required [(ngModel)]="username" #email></ion-input>
           </ion-item>
           <ion-item>
@@ -50,5 +50,5 @@
       </ion-col>
     </ion-row>
   </form>
-</ion-content>
+</ion-content> -->
 

@@ -26,6 +26,8 @@ import { RestgradeProvider } from '../providers/restgrade/restgrade';
 import { RestregisProvider } from '../providers/restregis/restregis';
 import { ResttimeProvider } from '../providers/resttime/resttime';
 import { ResticitProvider } from '../providers/resticit/resticit';
+import { HttpModule} from '@angular/http';
+
 
 
 
@@ -51,13 +53,14 @@ import { ResticitProvider } from '../providers/resticit/resticit';
     FlowPage,
     TextPage,
     MapPage,
-    KaruPage,
+    KaruPage
   
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

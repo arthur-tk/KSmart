@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+
+import { Http, RequestOptions, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable'Request, Headers;
 
 /*
   Generated class for the ResticitProvider provider.
@@ -11,12 +12,25 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ResticitProvider {
 
-  constructor(public http: HttpClient) {
+  constructor(public http: Http) {
     console.log('Hello ResticitProvider Provider');
   }
-  time(): Observable<any> {
-    let url = ""
-    return this.http.get<any>(url);
+
+  server: string = ""
+
+
+  icit() {
+
+    let type = "application/x-www-form-urlencoded";
+    let headers = new Headers({ 'Content-type': type });
+    let body = JSON.stringify({ username: "s5802041620084", password: "art15535" })
+    let option = new RequestOptions({ headers: headers });
+
+    return this.http.post(this.server , body,option).subscribe(res => {
+      let x = JSON.parse(res._body)
+      console.log(x)
+    })
   }
+
 
 }

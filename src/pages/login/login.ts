@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { disableDebugTools } from '@angular/platform-browser';
+import { ResticitProvider } from '../../providers/resticit/resticit';
 
 /**
  * Generated class for the LoginPage page.
@@ -19,13 +21,18 @@ export class LoginPage {
   username:string;
   password:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public resticitProvider: ResticitProvider) {
   }
 
   /*login(){
     console.log("Username: "+ this.username);
     console.log("Password: "+ this.password):
   }*/
+  ionViewDidLoad() {
+    this.resticitProvider.icit()
+
+    
+  }
   
   doLogin(){
 
