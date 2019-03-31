@@ -57,21 +57,26 @@ export class GradePage {
 
   year(event: any) {
     this.years = event.target.value;
+    console.log (this.years)
 
   }
 
   term(event: any) {
     this.terms = event.target.value;
+    console.log (this.terms)
 
   }
 
   choice() {
-    if (this.years == null) {
+    if (this.years == undefined || this.years == '' && this.terms == undefined || this.terms == '') {
+      console.log('badyear&terms')
+      alert('กรุณาเลือกปีการศึกษา และ ภาคเรียน')
+    }
+    else if (this.years == undefined || this.years == '') {
       console.log('badyear')
       alert('กรุณาเลือกปีการศึกษา')
-
     }
-    else if (this.terms == null) {
+    else if (this.terms == undefined || this.terms == '') {
       console.log('badterm')
       alert('กรุณาเลือกภาคเรียน')
     }
@@ -81,7 +86,6 @@ export class GradePage {
       this.pushterm = this.terms;
       console.log(this.pushyear)
       console.log(this.pushterm)
-      this.restgradeProvider.Setgrade(this.pushyear, this.pushterm)
 
       this.restgradeProvider.grade(this.pushyear, this.pushterm).subscribe((result) => {
 
