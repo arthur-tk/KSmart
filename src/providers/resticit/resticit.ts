@@ -16,20 +16,23 @@ export class ResticitProvider {
     console.log('Hello ResticitProvider Provider');
   }
 
-  server: string = ""
+  server: string = "https://exam.fte.kmutnb.ac.th/api/login.php/"
 
 
   icit() {
+   // let username = $usernamew;
+   // let password = $passwordw;
 
     let type = "application/x-www-form-urlencoded";
     let headers = new Headers({ 'Content-type': type });
-    let body = JSON.stringify({ username: "", password: "" })
+    let body = JSON.stringify({ username: "s5802041620084",password :"art15535"})
     let option = new RequestOptions({ headers: headers });
 
-    // return this.http.post(this.server , body,option).subscribe(res => {
-    //   let x = JSON.parse(res._body)
-    //   console.log(x)
-    // })
+    this.http.post(this.server , body,option).subscribe(res => {
+      let x = (res.json().userInfo)
+      console.log(x)
+      
+    })
   }
 
 

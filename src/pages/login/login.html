@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>Login</ion-title>
@@ -10,15 +10,15 @@
 <ion-content padding>
   <ion-list >
     <ion-item>
-      <ion-input placeholder="Username" name="username" (ionChange)="onChangeInputUser($event)"></ion-input>
+      <ion-input placeholder="Username" name="usernamew" (ionChange)="onChangeInputUser($event)"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-input placeholder="Password" name="password" (ionChange)="onChangeInputPass($event)"></ion-input>
+        <ion-input placeholder="Password" name="passwordw" type="password" (ionChange)="onChangeInputPass($event)"></ion-input>
       </ion-item>
   </ion-list>
 <button ion-button full (click)="doLogin()">Login</button>
-</ion-content>
-<!-- <ion-header>
+</ion-content> -->
+<ion-header>
   <ion-navbar>
     <ion-title>
       Login
@@ -26,17 +26,17 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+  <form #loginForm="ngForm" (ngSubmit)="doLogin()" autocomplete="off">
     <ion-row>
       <ion-col>
         <ion-list inset>
           <ion-item>
-            <ion-input [(ngModel)]='loginModel.username' placeholder="Username" name="username" id="loginField"
+            <ion-input placeholder="Email" name="username" id="loginField"
                        type="text" required [(ngModel)]="username" #email></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input placeholder="Password" name="password" id="passwordField" type="password" required
-              [(ngModel)]="password"></ion-input>
+            <ion-input placeholder="Password" name="password" id="passwordField"
+                       type="password" required [(ngModel)]="password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -44,10 +44,12 @@
     <ion-row>
       <ion-col>
         <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-        <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Login
+        <button ion-button class="submit-btn" full type="submit"
+                [disabled]="!loginForm.form.valid">Login
         </button>
       </ion-col>
     </ion-row>
   </form>
-</ion-content> -->
+</ion-content>
+
 
