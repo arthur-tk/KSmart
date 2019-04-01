@@ -16,7 +16,7 @@ export class ResticitProvider {
     console.log('Hello ResticitProvider Provider');
   }
 
-  server: string = "https://exam.fte.kmutnb.ac.th/api/login.php/"
+  server: string = ""
 
 
   icit() {
@@ -25,7 +25,7 @@ export class ResticitProvider {
 
     let type = "application/x-www-form-urlencoded";
     let headers = new Headers({ 'Content-type': type });
-    let body = JSON.stringify({ username: "s5802041620084",password :"art15535"})
+    let body = JSON.stringify({ username: "",password :""})
     let option = new RequestOptions({ headers: headers });
 
     this.http.post(this.server , body,option).subscribe(res => {

@@ -35,7 +35,7 @@ export class LoginPage {
     console.log("Password: "+ this.password):
   }*/
 
-  server: string = "https://exam.fte.kmutnb.ac.th/api/login.php/"
+  server: string = ""
 
 
   // icit() {
