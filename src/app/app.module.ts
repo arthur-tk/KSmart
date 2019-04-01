@@ -25,7 +25,6 @@ import { RestProvider } from '../providers/rest/rest';
 import { RestgradeProvider } from '../providers/restgrade/restgrade';
 import { RestregisProvider } from '../providers/restregis/restregis';
 import { ResttimeProvider } from '../providers/resttime/resttime';
-import { ResticitProvider } from '../providers/resticit/resticit';
 import { HttpModule} from '@angular/http';
 
 
@@ -91,9 +90,7 @@ import { HttpModule} from '@angular/http';
     RestProvider,
     RestgradeProvider,
     RestregisProvider,
-    ResttimeProvider,
-    ResticitProvider
-    
+    ResttimeProvider    
   ]
 })
 export class AppModule {}

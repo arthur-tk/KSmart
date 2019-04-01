@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { LoadingController } from 'ionic-angular';
-import { ResticitProvider } from '../../providers/resticit/resticit';
 import { Http, RequestOptions, Headers } from '@angular/http';
 
 
@@ -22,114 +21,55 @@ export class LoginPage {
   data: any;
   username: any;
   password: any;
- 
 
-  // username:string;
-  //password:string;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams , public resticitProvider: ResticitProvider, public loading: LoadingController , public http: Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loading: LoadingController, public http: Http) {
   }
-
-  /*login(){
-    console.log("Username: "+ this.username);
-    console.log("Password: "+ this.password):
-  }*/
 
   server: string = ""
 
 
-  // icit() {
-  //  // let username = $usernamew;
-  //  // let password = $passwordw;
+  onChangeUser($event) {
+    this.username = $event.target.value
+  }
 
-  //   let type = "application/x-www-form-urlencoded";
-  //   let headers = new Headers({ 'Content-type': type });
-  //   let body = JSON.stringify({ username: "s5802041620084",password :"art15535"})
-  //   let option = new RequestOptions({ headers: headers });
+  onChangePass($event) {
+    this.password = $event.target.value
 
-  //   this.http.post(this.server , body,option).subscribe(res => {
-  //     let x = (res.json().userInfo)
-  //     console.log(x)
-      
-  //   })
-  // }
+  }
 
   doLogin() {
 
-    
-    this.username = this.navParams.get('username');
-    this.password = this.navParams.get('password');
+
 
     let type = "application/x-www-form-urlencoded";
     let headers = new Headers({ 'Content-type': type });
     let option = new RequestOptions({ headers: headers });
 
-    let data = {
-      username: this.username,
-      password: this.password
+    this.http.post(this.server, { username: this.username, password: this.password }, option).subscribe(res => {
+      let x = (res.json())
+    
+      // if(x){
+      //   console.log('ok')
 
-    };
+      // }
+      // else {
+      //   console.log('err')
+      // }
+      console.log(x);
+      if (x.api_status == "success") {
+        console.log('ok')
+        console.log(x.api_status)
 
-    // let loader = this.loading.create({
-    //   content: 'Processing please wait...',
-    // });
+        var myString = this.username;
+        var id = myString.substr(1);
+        console.log(id)
+      }
+      else
+      {
+        alert('บัญชีผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง โปรดลองอีกครั้ง')
+      }
+     
+    });
 
-    // loader.present().then(() => {
-      this.http.post(this.server , data,option).subscribe(res => {
-        let x = (res.json().userInfo)
-        console.log(x);
-          // loader.dismiss()
-          // this.items = res.server_response;
-
-          // console.log(this.items);
-        });
-    // });
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   ionViewDidLoad() {
-//     this.resticitProvider.icit()
-
-    
-//   }
-  
-//   doLogin(){
-
-//     console.log(this.username + this.password)
-
-//     if( this.username =="" && this.password == ""){
-//       console.log("OK")
-//       this.navCtrl.push(HomePage);    
-      
-//     }
-//     else{
-//       console.log("bad")
-
-//     }
-
-//   }
-
-  
-
-//   onChangeInputUser(event){
-//       this.username = event.value
-//   }
-//   onChangeInputPass(event){
-//     this.password = event.value
-// }
-
-// }
