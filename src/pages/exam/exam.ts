@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -8,28 +9,32 @@ import { RestProvider } from '../../providers/rest/rest';
   templateUrl: 'exam.html',
 })
 
-
-
 export class ExamPage {
 
-  spy: any
-  test: any
-  
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+  showexam: any
+  id: any
+  authen: any
 
-
-  }
-  ionViewDidLoad() {
-    this.restProvider.exam().subscribe(result => {
-      this.spy = result.ExamFTE
-      console.log(this.spy);
-
-      this.spy.map((data) => {
-        console.log(this.test)
-        return this.test = data
-      })
-
-    })
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) { }
+  async ionViewDidLoad() {
+    let idstd = JSON.parse(window.sessionStorage.getItem('Authen'))
+    if (idstd !== null) {
+      this.authen = idstd
+      const x = this.authen.username.substr(1)
+      
+      if (Object.keys(this.authen).length > 1) {
+        this.restProvider.exam(x).subscribe(result => {
+          this.showexam = result.ExamFTE
+          console.log(this.showexam)
+          this.showexam.map((idstd) => {
+            return this.id = idstd
+          })
+        })
+      }
+    }
+    else {
+      alert('กรุณาเข้าสู่ระบบ')
+      this.navCtrl.push(LoginPage);
+    }
   }
 } 

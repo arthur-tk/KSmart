@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { LoginPage } from '../../pages/login/login';
 
 /*
   Generated class for the RestProvider provider.
@@ -15,9 +14,11 @@ export class RestProvider {
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
-  exam():Observable<any>{
-    let url = ""
+
+  exam(idstd):Observable<any>{
+    let url = ``
     return this.http.get<any>(url);
   }
-  
+
+
 }

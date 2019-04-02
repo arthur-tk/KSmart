@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestgradeProvider } from '../../providers/restgrade/restgrade';
-
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -18,6 +18,8 @@ export class GradePage {
   terms: string;
   pushyear: string;
   pushterm: string;
+  id: any
+  authen: any
 
 
   Values = {
@@ -28,46 +30,22 @@ export class GradePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restgradeProvider: RestgradeProvider) {
 
-
   }
 
-  // ionViewDidLoad() {
-  //   this.restgradeProvider.grade().subscribe((result) => {
-
-  //     this.gra = result.GradeList
-
-  //     var nameSubject = []
-  //     this.gra.COURSE_NAME_ENG.map((data) => {
-  //       nameSubject.push(data)
-  //       this.Values.name = nameSubject
-  //       this.NameSubject = nameSubject
-  //     })
-
-  //     var grade = []
-  //     this.gra.GRADE.map((data) => {
-  //       grade.push(data)
-  //       this.Grade = grade
-  //       this.Values.grade = grade
-  //     })
-
-  //     console.log(this.gra)
-
-  //   })
-  // }
-
+  
   year(event: any) {
     this.years = event.target.value;
-    console.log (this.years)
+    console.log(this.years)
 
   }
 
   term(event: any) {
     this.terms = event.target.value;
-    console.log (this.terms)
+    console.log(this.terms)
 
   }
 
-  choice() {
+ async choice() {
     if (this.years == undefined || this.years == '' && this.terms == undefined || this.terms == '') {
       console.log('badyear&terms')
       alert('กรุณาเลือกปีการศึกษา และ ภาคเรียน')
@@ -86,31 +64,71 @@ export class GradePage {
       this.pushterm = this.terms;
       console.log(this.pushyear)
       console.log(this.pushterm)
+      let idstd = JSON.parse(window.sessionStorage.getItem('Authen'))
+     
+        if (idstd !== null) {
+          this.authen = idstd
+          const x = this.authen.username.substr(1)
+          console.log(x)
 
-      this.restgradeProvider.grade(this.pushyear, this.pushterm).subscribe((result) => {
+          if (Object.keys(this.authen).length > 1) {
+            this.restgradeProvider.grade(x, this.pushyear, this.pushterm).subscribe((result) => {
 
-        this.gra = result.GradeList
+              this.gra = result.GradeList
 
-        var nameSubject = []
-        this.gra.COURSE_NAME_ENG.map((data) => {
-          nameSubject.push(data)
-          this.Values.name = nameSubject
-          this.NameSubject = nameSubject
-        })
 
-        var grade = []
-        this.gra.GRADE.map((data) => {
-          grade.push(data)
-          this.Grade = grade
-          this.Values.grade = grade
-        })
+              var nameSubject = []
+              this.gra.COURSE_NAME_ENG.map((data) => {
+                nameSubject.push(data)
+                this.Values.name = nameSubject
+                this.NameSubject = nameSubject
+              })
 
-        console.log(this.gra)
+              var grade = []
+              this.gra.GRADE.map((data) => {
+                grade.push(data)
+                this.Grade = grade
+                this.Values.grade = grade
+              })
 
-      })
+              console.log(this.gra)
+
+
+
+            })
+          }
+        }
+        else {
+          alert('กรุณาเข้าสู่ระบบ')
+          this.navCtrl.push(LoginPage);  
+        }
+        
+     
 
     }
-
   }
-
 }
+
+
+
+// this.restgradeProvider.grade(this.pushyear, this.pushterm).subscribe((result) => {
+
+//   this.gra = result.GradeList
+
+//   var nameSubject = []
+//   this.gra.COURSE_NAME_ENG.map((data) => {
+//     nameSubject.push(data)
+//     this.Values.name = nameSubject
+//     this.NameSubject = nameSubject
+//   })
+
+//   var grade = []
+//   this.gra.GRADE.map((data) => {
+//     grade.push(data)
+//     this.Grade = grade
+//     this.Values.grade = grade
+//   })
+
+//   console.log(this.gra)
+
+// })

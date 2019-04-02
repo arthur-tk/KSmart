@@ -15,17 +15,12 @@ export class RestgradeProvider {
     console.log('Hello RestgradeProvider Provider');
   }
 
-  grade($year ,$term):Observable<any>{
+  grade(idstd, $year ,$term):Observable<any>{
     let terms = $term 
     let years = $year
     let url = ``
     return this.http.get<any>(url);  
   }
-  
-  // grade():Observable<any>{
-  //   let url = ""
-  //   return this.http.get<any>(url);  
-  // }
   
   
 }

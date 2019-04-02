@@ -26,8 +26,10 @@ import { RestgradeProvider } from '../providers/restgrade/restgrade';
 import { RestregisProvider } from '../providers/restregis/restregis';
 import { ResttimeProvider } from '../providers/resttime/resttime';
 import { HttpModule} from '@angular/http';
-
-
+import { IonicStorageModule } from '@ionic/storage';
+import { UserPage } from '../pages/user/user';
+import { OtherPage } from '../pages/other/other';
+import { DevPage } from '../pages/Dev/Dev';
 
 
 
@@ -52,7 +54,10 @@ import { HttpModule} from '@angular/http';
     FlowPage,
     TextPage,
     MapPage,
-    KaruPage
+    KaruPage,
+    UserPage,
+    OtherPage,
+    DevPage
   
     
   ],
@@ -60,7 +65,8 @@ import { HttpModule} from '@angular/http';
     BrowserModule,
     HttpClientModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -80,7 +86,10 @@ import { HttpModule} from '@angular/http';
     FlowPage,
     TextPage,
     MapPage,
-    KaruPage
+    KaruPage,
+    UserPage,
+    OtherPage,
+    DevPage
     
   ],
   providers: [

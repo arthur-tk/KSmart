@@ -14,8 +14,9 @@ export class RestregisProvider {
   constructor(public http: HttpClient) {
     console.log('Hello RestregisProvider Provider');
   }
-  regis(): Observable<any> {
-    let url = ""
+  regis(idstd): Observable<any> {
+    let url = ``
     return this.http.get<any>(url);
   }
+  
 }

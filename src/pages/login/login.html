@@ -1,33 +1,33 @@
 <ion-header>
-  <img style="width:400px ; height:94.5px ;" src="../../assets/imgs/loginpage.png" alt="error" />
+  <img  style="width:400px ; height:100px ;" src="../../assets/imgs/loginpage.png" alt="error" />
 </ion-header>
 
 
-<ion-content padding>
-  <img style="width:350px ; height:250px ;" src="../../assets/imgs/Ksmart2.png" alt="error" />
-  <form #loginForm="ngForm" (ngSubmit)="doLogin()" autocomplete="off">
+<ion-content padding >
+  <ion-card>
+  <img style="width:300px ; height:200px ;" src="../../assets/imgs/Ksmart2.png" alt="error"/>
+  <form  #loginForm="ngForm" (ngSubmit)="doLogin()" autocomplete="off">
     <ion-row>
       <ion-col>
         <ion-list inset>
           <ion-item>
             <ion-input placeholder="Username" name="username" id="loginField" type="text" required
-              [(ngModel)]="username" (change)="onChangeUser($event)"></ion-input>
+              [(ngModel)]="username" #email></ion-input>
           </ion-item>
           <ion-item>
             <ion-input placeholder="Password" name="password" id="passwordField" type="password" required
-              [(ngModel)]="password" (change)="onChangePass($event)"></ion-input>
+              [(ngModel)]="password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-        <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Login
+        <button ion-button full type="submit" [disabled]="!loginForm.form.valid">Login
         </button>
       </ion-col>
     </ion-row>
   </form>
+</ion-card>
+  
 </ion-content>
-
-
