@@ -15,7 +15,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) { }
 
-  server: string = ""
+  server: string = "https://exam.fte.kmutnb.ac.th/api/login.php/"
 
   onChangeUser($event) {
     this.username = $event.target.value
@@ -32,8 +32,6 @@ export class LoginPage {
 
       console.log(x);
       if (x.api_status == "success") {
-        var myString = this.username;
-        var id = myString.substr(1);
         window.sessionStorage.setItem('Authen', JSON.stringify(x.userInfo))
         this.navCtrl.push(UserPage);
       }

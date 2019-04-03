@@ -15,7 +15,7 @@ export class RestregisProvider {
     console.log('Hello RestregisProvider Provider');
   }
   regis(idstd): Observable<any> {
-    let url = ``
+    let url = `https://exam.fte.kmutnb.ac.th/api/Regisdetail.php/?std=${idstd}&year=2561&sem=2`
     return this.http.get<any>(url);
   }
   

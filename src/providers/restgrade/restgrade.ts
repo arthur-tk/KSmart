@@ -18,7 +18,7 @@ export class RestgradeProvider {
   grade(idstd, $year ,$term):Observable<any>{
     let terms = $term 
     let years = $year
-    let url = ``
+    let url = `https://exam.fte.kmutnb.ac.th/api/GradeList.php/?std=${idstd}&year=${years}&sem=${terms}`
     return this.http.get<any>(url);  
   }
   
