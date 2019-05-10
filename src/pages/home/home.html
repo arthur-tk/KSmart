@@ -1,29 +1,15 @@
-<script>
-  test = () => {
-    console.log("test")
-  }
-
-</script>
-
 <ion-header>
 
-  <img style="width:400px ; height:90px ;" src="../../assets/imgs/Header1.png" alt="error" />
+  <img style="width:100% ; height:100% ;" src="../../assets/imgs/Header1.png" alt="error" />
 </ion-header>
 
 <ion-content padding>
   <ion-grid>
 
-    <ion-row >&nbsp;&nbsp;&nbsp;
-      <button (click)="onAboutClick()" style="background-color: white">
-        <ion-col size="3">
-          <ion-card>
-            <img style="width:65px ; height:110px ;" src="../../assets/imgs/about.png" alt="error" />
-          </ion-card>
-        </ion-col>
-      </button>
-
+    <!-- <ion-row >
+  
       <button (click)="onCalendarClick()" style="background-color: white">
-        <ion-col size="3">
+        <ion-col>
           <ion-card>
             <img style="width:65px ; height:110px ;" src="../../assets/imgs/Event.png" alt="error" />
           </ion-card>
@@ -32,21 +18,15 @@
 
 
       <button (click)="onGradeClick()" style="background-color: white">
-        <ion-col size="3">
+        <ion-col >
           <ion-card>
             <img style="width:65px ; height:110px ;" src="../../assets/imgs/grade.png" alt="error" />
           </ion-card>
         </ion-col>
       </button>
 
-
-
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row >&nbsp;&nbsp;&nbsp;
       <button (click)="onClassClick()" style="background-color: white">
-        <ion-col size="3">
+        <ion-col >
           <ion-card>
             <img style="width:65px ; height:110px ;" src="../../assets/imgs/class.png" alt="error" />
           </ion-card>
@@ -54,7 +34,7 @@
       </button>
 
       <button (click)="onExamClick()" style="background-color: white">
-        <ion-col size="3">
+        <ion-col >
           <ion-card>
             <img style="width:65px ; height:110px ;" src="../../assets/imgs/exam.png" alt="error" />
           </ion-card>
@@ -62,35 +42,64 @@
       </button>
 
       <button (click)="onRuleClick()" style="background-color: white">
-        <ion-col size="3">
+        <ion-col >
           <ion-card>
             <img style="width:65px ; height:110px ;" src="../../assets/imgs/Rule.png" alt="error" />
           </ion-card>
         </ion-col>
       </button>
 
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>&nbsp;&nbsp;&nbsp;
-
-      <button (click)="onContactClick()" style="background-color: white">
-        <ion-col size="3">
-          <ion-card>
-            <img style="width:65px ; height:110px ;" src="../../assets/imgs/contact.png" alt="error" />
-          </ion-card>
-        </ion-col>
-      </button>
+      
       <button (click)="onMapClick()" style="background-color: white">
-        <ion-col size="3">
+        <ion-col >
           <ion-card>
             <img style="width:65px ; height:110px ;" src="../../assets/imgs/map.png" alt="error" />
           </ion-card>
         </ion-col>
       </button>
+      <button (click)="onAboutClick()" style="background-color: white">
+        <ion-col >
+          <ion-card>
+            <img style="width:65px ; height:110px ;" src="../../assets/imgs/about.png" alt="error" />
+          </ion-card>
+        </ion-col>
+      </button>
 
+      <button (click)="onHospitalClick()" style="background-color: white">
+        <ion-col >
+          <ion-card>
+            <img style="width:65px ; height:110px ;" src="../../assets/imgs/hospital.png" alt="error" />
+          </ion-card>
+        </ion-col>
+      </button>
+    </ion-row> -->
+    <ion-row>
+      <ion-col>
+        <img style="width:30% ; " src="../../assets/imgs/class.png" alt="error" (click)="onClassClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/exam.png" alt="error" (click)="onExamClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/grade.png" alt="error" (click)="onGradeClick()" />
+   
+        <img style="width:30% ; " src="../../assets/imgs/event.png" alt="error" (click)="onCalendarClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/accident.png" alt="error" (click)="onAccidentClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/map.png" alt="error" (click)="onMapClick()" />
+      
+        <img style="width:30% ; " src="../../assets/imgs/ICIT.png" alt="error" (click)="onIcitClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/loan.png" alt="error" (click)="onLoanClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/Library.png" alt="error" (click)="onLibraryClick()" />
+      
+        <img style="width:30% ; " src="../../assets/imgs/rule.png" alt="error" (click)="onRuleClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/about.png" alt="error" (click)="onAboutClick()" />
+        &nbsp;&nbsp;
+        <img style="width:30% ; " src="../../assets/imgs/pause.png" alt="error" />
+      </ion-col>
     </ion-row>
-
   </ion-grid>
 
 </ion-content>

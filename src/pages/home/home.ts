@@ -6,9 +6,12 @@ import { AboutPage } from '../about/about';
 import { ClassPage } from '../class/class';
 import { ExamPage } from '../exam/exam';
 import { RulePage } from '../rule/rule';
-import { ContactPage } from '../contact/contact';
 import { GradePage } from '../grade/grade';
 import { MapPage } from '../map/map';
+import { LibraryPage } from '../library/library';
+import { IcitPage } from '../icit/icit';
+import { LoanPage } from '../loan/loan';
+import { AccidentPage } from '../accident/accident';
 
 
 /**
@@ -56,10 +59,6 @@ export class HomePage {
     this.navCtrl.push(RulePage);
   }
 
-  onContactClick(){
-    this.navCtrl.push(ContactPage);
-  }
-
   onGradeClick(){
     this.navCtrl.push(GradePage);
   }
@@ -68,5 +67,19 @@ export class HomePage {
     this.navCtrl.push(MapPage);
   }
 
+  onLibraryClick(){
+    this.navCtrl.push(LibraryPage);
+  }
 
+  onIcitClick(){
+    this.navCtrl.push(IcitPage);
+  }
+
+  onLoanClick(){
+    this.navCtrl.push(LoanPage);
+  }
+
+  onAccidentClick(){
+    this.navCtrl.push(AccidentPage);
+  }
 }

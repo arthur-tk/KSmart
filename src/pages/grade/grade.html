@@ -1,17 +1,17 @@
 <ion-header>
 
  
-<img style="width:400px ; height:100px ;" src="../../assets/imgs/gradepage.png" alt="error" />
+<img style="width:100%" src="../../assets/imgs/gradepage.png" alt="error" />
 </ion-header>
 
 <ion-content padding >
 
   <ion-card>
-    <ion-card-header style="background-color: #ff6666">
-        กรุณาระบุ ปีการศึกษา และภาคเรียน 
+    <ion-card-header style="background-color: #29c731">
+        <b>กรุณาระบุ ปีการศึกษาและภาคเรียน </b>
     </ion-card-header>
     <ion-card-content>
-      <ion-label >
+      <ion-label  class="button">
       <div>เลือก:
          <select (change)="year($event)">
         <option value="">ปีการศึกษา</option>
@@ -29,15 +29,15 @@
         <option value="1">1</option>
         <option value="2">2</option>
         </select>
-        <button style="background-color: rgb(112, 250, 209); font-size: 20px; border-radius: 12px; margin-left: 5px" (click)="choice()">ตกลง</button>
+        <button style="width: 20%;height: 10%; font-size: 18px;  margin-left: 15px;" (click)="choice()">ตกลง</button>
         </div>
-      </ion-label>
+      </ion-label>  
       <ion-reorder slot="end"></ion-reorder>
     </ion-card-content>
   </ion-card>
 <hr>
    
-   <ion-card class="bg-image">
+   <ion-card >
       
      
   <ion-list *ngFor="let grade of Grade; let i = index;">
@@ -45,16 +45,20 @@
       
       <ion-col size="6" >
         <div style="width: 150px;">
-          <ion-label>{{NameSubject[i]}}</ion-label>
+          <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;{{NameSubject[i]}}</ion-label>
         </div>
       </ion-col>
-      <ion-col >
+      <ion-col style="border-left: solid #e0dfdf 1px;">
         <ion-label >
           <span style="padding-left : 70px"> {{grade}}</span>
         </ion-label>
       </ion-col>
     </ion-row>
-
+    <hr>
   </ion-list>
-  </ion-card> 
+  </ion-card> <br/>
+  ดูรายละเอียดเพิ่มเติมได้ที่<br>
+  &nbsp;&nbsp;&nbsp;- <a href="https://grade.icit.kmutnb.ac.th/" target="_system">ระบบประเมินการสอน</a><br>
+  &nbsp;&nbsp;&nbsp;- <a href="http://grade-report.icit.kmutnb.ac.th/" target="_system">Grade Report</a><br>
+  &nbsp;&nbsp;&nbsp;- <a href="http://klogic.kmutnb.ac.th:8080/kris/index.jsp" target="_system">ระบบลงทะเบียน</a>
 </ion-content>

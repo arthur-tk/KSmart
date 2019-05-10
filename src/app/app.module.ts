@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ContactPage } from '../pages/contact/contact';
 import { AboutPage } from '../pages/about/about';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { LoginPage } from '../pages/login/login';
@@ -13,13 +12,7 @@ import { ClassPage } from '../pages/class/class';
 import { ExamPage } from '../pages/exam/exam';
 import { RulePage } from '../pages/rule/rule';
 import { GradePage } from '../pages/grade/grade';
-import { HiskPage } from '../pages/hisk/hisk';
-import { LogoPage } from '../pages/logo/logo';
-import { ColorPage } from '../pages/color/color';
-import { FlowPage } from '../pages/flow/flow';
-import { TextPage } from '../pages/text/text';
 import { MapPage } from '../pages/map/map';
-import { KaruPage } from '../pages/karu/karu';
 import { HttpClientModule} from '@angular/common/http';
 import { RestProvider } from '../providers/rest/rest';
 import { RestgradeProvider } from '../providers/restgrade/restgrade';
@@ -30,8 +23,11 @@ import { IonicStorageModule } from '@ionic/storage';
 import { UserPage } from '../pages/user/user';
 import { OtherPage } from '../pages/other/other';
 import { DevPage } from '../pages/Dev/Dev';
-
-
+import { HospitalPage } from '../pages/hospital/hospital';
+import { LibraryPage } from '../pages/library/library';
+import { IcitPage } from '../pages/icit/icit';
+import { LoanPage } from '../pages/loan/loan';
+import { AccidentPage } from '../pages/accident/accident';
 
 
 
@@ -40,7 +36,6 @@ import { DevPage } from '../pages/Dev/Dev';
   declarations: [
     MyApp,
     HomePage,
-    ContactPage,
     AboutPage,
     CalendarPage,
     LoginPage,
@@ -48,17 +43,15 @@ import { DevPage } from '../pages/Dev/Dev';
     ExamPage,
     RulePage,
     GradePage,
-    HiskPage,
-    LogoPage,
-    ColorPage,
-    FlowPage,
-    TextPage,
     MapPage,
-    KaruPage,
     UserPage,
     OtherPage,
-    DevPage
-  
+    DevPage,
+    HospitalPage,
+    LibraryPage,
+    IcitPage,
+    LoanPage,
+    AccidentPage
     
   ],
   imports: [
@@ -72,7 +65,6 @@ import { DevPage } from '../pages/Dev/Dev';
   entryComponents: [
     MyApp,
     HomePage,
-    ContactPage,
     AboutPage,
     CalendarPage,
     LoginPage,
@@ -80,16 +72,15 @@ import { DevPage } from '../pages/Dev/Dev';
     ExamPage,
     RulePage,
     GradePage,
-    HiskPage,
-    LogoPage,
-    ColorPage,
-    FlowPage,
-    TextPage,
     MapPage,
-    KaruPage,
     UserPage,
     OtherPage,
-    DevPage
+    DevPage,
+    HospitalPage,
+    LibraryPage,
+    IcitPage,
+    LoanPage,
+    AccidentPage
     
   ],
   providers: [
