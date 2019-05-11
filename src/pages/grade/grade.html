@@ -1,64 +1,67 @@
 <ion-header>
 
- 
-<img style="width:100%" src="../../assets/imgs/gradepage.png" alt="error" />
+
+  <img style="width:100%" src="../../assets/imgs/gradepage.png" alt="error" />
 </ion-header>
 
-<ion-content padding >
+<ion-content padding>
 
   <ion-card>
     <ion-card-header style="background-color: #29c731">
-        <b>กรุณาระบุ ปีการศึกษาและภาคเรียน </b>
+      <b>กรุณาระบุ ปีการศึกษาและภาคเรียน </b>
     </ion-card-header>
     <ion-card-content>
-      <ion-label  class="button">
-      <div>เลือก:
-         <select (change)="year($event)">
-        <option value="">ปีการศึกษา</option>
-        <option value="2555">2555</option>
-        <option value="2556">2556</option>
-        <option value="2557">2557</option>
-        <option value="2558">2558</option>
-        <option value="2559">2559</option>
-        <option value="2560">2560</option>
-        <option value="2561">2561</option>
-        <option value="2562">2562</option>     
-      </select>
-      <select (change)="term($event)">
-        <option value="">ภาคเรียน</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        </select>
-        <button style="width: 20%;height: 10%; font-size: 18px;  margin-left: 15px;" (click)="choice()">ตกลง</button>
+      <ion-label class="button">
+        <div>เลือก:
+          <select (change)="year($event)">
+            <option value="">ปีการศึกษา</option>
+            <option value="2555">2555</option>
+            <option value="2556">2556</option>
+            <option value="2557">2557</option>
+            <option value="2558">2558</option>
+            <option value="2559">2559</option>
+            <option value="2560">2560</option>
+            <option value="2561">2561</option>
+            <option value="2562">2562</option>
+          </select>
+          <select (change)="term($event)">
+            <option value="">ภาคเรียน</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          <button style="width: 20%;height: 10%; font-size: 18px;  margin-left: 15px;" (click)="choice()">ตกลง</button>
         </div>
-      </ion-label>  
+      </ion-label>
       <ion-reorder slot="end"></ion-reorder>
     </ion-card-content>
   </ion-card>
-<hr>
-   
-   <ion-card >
-      
-     
-  <ion-list *ngFor="let grade of Grade; let i = index;">
-    <ion-row>
-      
-      <ion-col size="6" >
-        <div style="width: 150px;">
-          <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;{{NameSubject[i]}}</ion-label>
-        </div>
-      </ion-col>
-      <ion-col style="border-left: solid #e0dfdf 1px;">
-        <ion-label >
-          <span style="padding-left : 70px"> {{grade}}</span>
-        </ion-label>
-      </ion-col>
-    </ion-row>
-    <hr>
-  </ion-list>
-  </ion-card> <br/>
+  <hr>
+
+  <ion-card>
+
+
+    <ion-list *ngFor="let grade of Grade; let i = index;">
+      <ion-row>
+
+        <ion-col size="6">
+          <div style="width: 150px;">
+            <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;{{NameSubject[i]}}</ion-label>
+          </div>
+        </ion-col>
+        <ion-col style="border-left: solid #e0dfdf 1px;">
+          <ion-label>
+            <span style="padding-left : 70px"> {{grade}}</span>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <hr>
+    </ion-list>
+  </ion-card> <br />
   ดูรายละเอียดเพิ่มเติมได้ที่<br>
-  &nbsp;&nbsp;&nbsp;- <a href="https://grade.icit.kmutnb.ac.th/" target="_system">ระบบประเมินการสอน</a><br>
-  &nbsp;&nbsp;&nbsp;- <a href="http://grade-report.icit.kmutnb.ac.th/" target="_system">Grade Report</a><br>
-  &nbsp;&nbsp;&nbsp;- <a href="http://klogic.kmutnb.ac.th:8080/kris/index.jsp" target="_system">ระบบลงทะเบียน</a>
+  &nbsp;&nbsp;&nbsp;- <a href="#"
+    onclick="window.open('https://grade.icit.kmutnb.ac.th/', '_system', 'location=yes');">ระบบประเมินการสอน</a><br>
+  &nbsp;&nbsp;&nbsp;- <a href="#"
+    onclick="window.open('http://grade-report.icit.kmutnb.ac.th/', '_system', 'location=yes');">Grade Report</a><br>
+  &nbsp;&nbsp;&nbsp;- <a href="#"
+    onclick="window.open('http://klogic.kmutnb.ac.th:8080/kris/index.jsp', '_system', 'location=yes');">ระบบลงทะเบียน</a>
 </ion-content>

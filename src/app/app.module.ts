@@ -23,7 +23,6 @@ import { IonicStorageModule } from '@ionic/storage';
 import { UserPage } from '../pages/user/user';
 import { OtherPage } from '../pages/other/other';
 import { DevPage } from '../pages/Dev/Dev';
-import { HospitalPage } from '../pages/hospital/hospital';
 import { LibraryPage } from '../pages/library/library';
 import { IcitPage } from '../pages/icit/icit';
 import { LoanPage } from '../pages/loan/loan';
@@ -47,7 +46,6 @@ import { AccidentPage } from '../pages/accident/accident';
     UserPage,
     OtherPage,
     DevPage,
-    HospitalPage,
     LibraryPage,
     IcitPage,
     LoanPage,
@@ -76,7 +74,6 @@ import { AccidentPage } from '../pages/accident/accident';
     UserPage,
     OtherPage,
     DevPage,
-    HospitalPage,
     LibraryPage,
     IcitPage,
     LoanPage,
