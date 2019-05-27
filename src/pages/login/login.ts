@@ -33,7 +33,15 @@ export class LoginPage {
       console.log(x);
       if (x.api_status == "success") {
         window.sessionStorage.setItem('Authen', JSON.stringify(x.userInfo))
-        this.navCtrl.push(UserPage);
+        var sub = this.username.substring(4, 5);
+        sub = parseInt(sub, 10);
+        if (sub == 2) {
+          this.navCtrl.push(UserPage);
+        }
+        else {
+          alert('กรุณาลงชื่อเข้าใช้ด้วยบัญชีผู้ใช้คณะครุศาสตร์')
+          console.log(sub)
+        }
       }
       else {
         alert('บัญชีผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง โปรดลองอีกครั้ง')
