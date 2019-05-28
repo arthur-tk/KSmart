@@ -41,6 +41,7 @@ export class LoginPage {
         else {
           alert('กรุณาลงชื่อเข้าใช้ด้วยบัญชีผู้ใช้คณะครุศาสตร์')
           console.log(sub)
+          window.sessionStorage.clear();
         }
       }
       else {
